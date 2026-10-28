@@ -36,6 +36,9 @@
         </PackageReference>
         <!--Vem pelo FastReport e pelo NuGet na 8.0.1, que tem vulnerabilidade conhecida.-->
         <PackageReference Include="System.Security.Cryptography.Pkcs" Version="10.0.14" />
+        <!--Vem na 8.0; uma extensão (opção "extensao") compilada contra a 10.0 não carrega com a 8.0 aqui:
+            o runtime não aceita versão menor da lista do aplicativo e não procura na pasta dela.-->
+        <PackageReference Include="System.Security.Cryptography.ProtectedData" Version="10.0.5" />
         <PackageReference Include="Serilog.Extensions.Logging" Version="10.0.0" />
         <PackageReference Include="Serilog.Sinks.File" Version="7.0.0" />
         <PackageReference Include="Microsoft.CodeAnalysis.Common" Version="5.9.0" />
